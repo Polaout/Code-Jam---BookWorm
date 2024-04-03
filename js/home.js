@@ -2,7 +2,7 @@ const codeLogin = localStorage.getItem("loginCode");
 
 if (!codeLogin) {
 
-    window.location.replace("./login.html");
+    window.location.replace("./login");
     alert("teste")
 
 }
