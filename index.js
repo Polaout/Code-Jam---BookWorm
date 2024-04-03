@@ -15,6 +15,10 @@ app.get('/home', (req, res) => {
     res.sendFile(__dirname + '/html/home.html');
 });
 
+app.get('/login', (req, res) => {
+    res.sendFile(__dirname + '/html/login.html');
+});
+
 app.use('/css', express.static(__dirname + '/css'));
 
 app.use('/fonts', express.static(__dirname + '/fonts'));
