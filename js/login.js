@@ -4,23 +4,13 @@ const codeLogin = localStorage.getItem("loginCode");
 //Get element of login button
 const buttonLogin = document.getElementById("buttonLogin");
 
-var souGay = true;
-
-if (souGay) return alert("GAY!!");
-
 //Checking if exist a code in localStorage
 if (codeLogin) {
 
     //Redirect to home page
     window.location.replace("./home.html");
 
-}else {
-
-    alert("teste");
-
 }
-
-alert("teste")
 
 //Click event in buttonLogin element
 buttonLogin.addEventListener("click", (event) => {
