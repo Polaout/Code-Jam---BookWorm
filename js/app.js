@@ -64,12 +64,15 @@ function appRefresh() {
         
         signinButton.addEventListener("click", (event) => {
 
-
-
+          option = "Entrar";
+          appRefresh();
+          
         })
 
         signupButton.addEventListener("click", (event) => {
 
+          option = "Inscreva-se"
+          appRefresh();
 
         });
 
