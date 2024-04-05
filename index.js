@@ -7,6 +7,39 @@ const port = process.env.PORT || Math.floor((Math.random() * (3000 + 1 - 1000)) 
 const fs = require('fs');
 const path = require('path')
 
+const accounts = [
+    { 
+        id: "D29SAL39SL32",
+        account: {
+            username: "AugustoFoda2023",
+            password: "eusoufodinha",
+            icon: {
+                status: true,
+                image: "./images/profiles/default/default-1.jpg"
+            }
+        }
+    }
+];
+
+function generateID(length) {
+
+    var chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var passwordLength = length;
+    var password = "";
+
+    for (var i = 0; i <= passwordLength; i++) {
+
+        var randomNumber = Math.floor(Math.random() * chars.length);
+        password += chars.substring(randomNumber, randomNumber +1);
+    
+    }
+
+    return password;
+
+
+
+}
+
 app.get('/', (req, res) => {
     res.redirect('/home');
 });
@@ -33,6 +66,18 @@ http.listen(port, () => { });
 
 io.on('connection', async (socket) => {
     
+    socket.on("newAccountCreate", (event) => {
+
+        console.log("Nova Conta sendo criada!");
+
+        accounts.forEach(account => {
+
+            
+
+        })
+
+    });
+
     socket.on("disconnect", () => {
 
         

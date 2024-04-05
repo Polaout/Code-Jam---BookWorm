@@ -1,17 +1,62 @@
-.loginModal {
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-    background-color: gray;
+body {
+
+    margin: 0px;
+    background-color: #222831;
+    
+}
+
+.login {
+
+    width: 100%;
+    height: 100%;
+
+    display: none; 
 
 }
 
-.buttonLogin {
+.loginModal {
 
-    width: 50px;
-    height: 50px;
+    width: 100%;
+    height: 50%;
 
-    border-color: black;
-    border-radius: 10px;
-    border-width: 10px;
-    background-color: white;
+    top: 50%;
+
+    position: absolute;
+
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    background-color: #EEEEEE;
+
+}
+
+.loginTitle {
+
+    left: 8%;
+    top: 15%;
+
+    position: absolute;
+
+    color: #31363F;
+
+    font-family: Inter;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+.loginTitleAlert {
+
+    left: 8%;
+    top: 22%;
+
+    position: absolute;
+
+    color: #76ABAE;
+
+    font-family: Inter;
+    font-size: 38px;
+    font-weight: 700;
 
 }
