@@ -33,7 +33,7 @@ function appRefresh() {
           case "Inscreva-se": {
 
             signupButton.style.backgroundColor = "#222831"
-            signinButton.style.backgroundColor = "";
+            signinButton.style.backgroundColor = "none";
             signupButton.style.borderBottomRightRadius = "0px";
             signupButton.style.borderTopRightRadius = "0px";
             break;
@@ -43,9 +43,10 @@ function appRefresh() {
           case "Entrar": {
 
             signinButton.style.backgroundColor = "#222831"
-            signupButton.style.backgroundColor = "";
+            signupButton.style.backgroundColor = "none";
             signinButton.style.borderBottomLeftRadius = "0px";
             signinButton.style.borderTopLeftRadius = "0px";
+            break;
 
           }
 
@@ -66,7 +67,7 @@ function appRefresh() {
 
           option = "Entrar";
           appRefresh();
-          
+
         })
 
         signupButton.addEventListener("click", (event) => {
