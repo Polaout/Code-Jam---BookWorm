@@ -12,7 +12,7 @@ function appRefresh() {
 
     }
 
-    case "Login": {
+    case "Login - Initial": {
 
         const loginPage = document.getElementById("login");
 

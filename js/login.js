@@ -6,7 +6,7 @@ function checkLogin() {
 
     if (!codeLogin) {
     
-        page = "Login"
+        page = "Login - Initial"
         alert("Change Page")
         appRefresh();
     }else {
