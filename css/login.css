@@ -18,6 +18,22 @@
     
 }
 
+@keyframes up-bottom {
+
+    0% {
+
+      transform: translateY(500px);
+
+    }
+
+    100% {
+
+      transform: translateY(0);
+
+    }
+    
+}
+
 @keyframes fade-in {
 
     0% {
@@ -31,6 +47,26 @@
       opacity: 1;
 
     }
+    
+}
+
+input[type="text"]::-webkit-outer-spin-button, input[type="number"]::-webkit-inner-spin-button {
+    
+    -webkit-appearance: none;
+    margin: 0;
+    border: none; 
+    border-width: 0; 
+    box-shadow: none;
+    outline: none;
+    
+}
+input[type="text"] {
+    
+    -moz-appearance: textfield;
+    border: none; 
+    border-width: 0px; 
+    box-shadow: none;
+    outline: none;
     
 }
 
@@ -59,7 +95,7 @@ body {
     left: 20%;
 
     position: absolute;
-    animation: fade-in 5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
 }
 
@@ -76,7 +112,7 @@ body {
     border-top-right-radius: 50px;
     background-color: #EEEEEE;
 
-    animation: fade-in-bottom 2s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    animation: fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
     
 }
 
@@ -138,9 +174,10 @@ body {
 
     position: absolute;
 
-    border-radius: 30px;;
+    border-radius: 30px;
 
-    background-color: #222831 
+    border-style: solid;
+    border-color: #222831; 
 
 }
 
@@ -155,15 +192,13 @@ body {
     position: absolute;
 
     border-radius: 30px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
 
     border-style: solid;
     border-color: #222831 
 
 }
 
-.signupTitle {
+.signupButtonTitle {
 
     left: 20%;
     top: 30%;
@@ -192,5 +227,45 @@ body {
     font-size: 18px;
     font-weight: 700;
 
+
+}
+
+.signup {
+
+    display: none;
+
+}
+
+.signupIllustrate {
+
+    width: 40%;
+    height: 20%;
+
+    top: 5%;
+    left: 30%;
+
+    position: absolute;
+
+}
+
+.signupTitle {
+
+    left: 16%;
+    top: 22%;
+
+    position: absolute;
+
+    color: #222831;
+
+    font-family: Inter;
+    font-size: 26px;
+    font-weight: 700;
+
+
+}
+
+.usernameInput {
+
+    background: none;
 
 }
