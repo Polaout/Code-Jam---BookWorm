@@ -55,7 +55,7 @@ function loginRefresh() {
             if (!loginPage) {
 
                 loginRefresh();
-
+                break;
             }
 
             function optionRefresh() {
