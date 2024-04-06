@@ -34,8 +34,7 @@ function inputCheck(target) {
 
 function loginRefresh() {
 
-    alert(}
-        "refresh");
+    alert("refresh");
     switch(page) {
 
         case "Login - Initial": {
