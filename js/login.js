@@ -52,6 +52,12 @@ function loginRefresh() {
             const loginIllustrate = document.getElementById("loginIllustrate");
             const loginModal = document.getElementById("loginModal");
 
+            if (!loginPage) {
+
+                loginRefresh();
+
+            }
+
             function optionRefresh() {
             
             switch(option) {
@@ -91,7 +97,7 @@ function loginRefresh() {
 
             alert("teste");
             loginPage.style.display = "block";
-                
+
             signinButton.addEventListener("click", (event) => {
 
             option = "Entrar";
