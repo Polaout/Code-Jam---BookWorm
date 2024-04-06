@@ -18,7 +18,7 @@ function homeRefresh() {
 
         case "Home": {
             
-            alert("teste");
+            alert("homeAbacate");
             checkLogin();
             break;
 

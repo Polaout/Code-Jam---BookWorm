@@ -9,12 +9,16 @@ async function loadHtml(html, elementID) {
 
 }
 
-function appRefresh(page) {
+alert("tafunfando?")
 
-  switch(page) {
+function appRefresh(typePage) {
+
+  alert("appRefresh");
+  switch(typePage) {
 
     case "Home": {
 
+      alert("homeApp")
       homeRefresh();
       break;
 
@@ -22,9 +26,11 @@ function appRefresh(page) {
 
     case "Login": {
 
+      alert("loginApp");
       loadHtml("/html/login.html", "app");
-      alert("teste");
+      alert("HTMLEOU")
       loginRefresh();
+      alert("REFRESHOU")
       break;
 
     }

@@ -1,3 +1,5 @@
+var option = "Inscreva-se"
+
 function inputCheck(target) {
 
     const signupError = document.getElementById("signupError");
@@ -32,14 +34,17 @@ function inputCheck(target) {
 
 function loginRefresh() {
 
+    alert(}
+        "refresh");
     switch(page) {
 
         case "Login - Initial": {
 
+            alert("initial"); 
             const loginPage = document.getElementById("login");
 
-            var touchstartX = 0;
-            var touchendX = 0;
+            let touchstartX = 0;
+            let touchendX = 0;
 
             const signinButton = document.getElementById("signinButton");
             const signupButton = document.getElementById("signupButton");
@@ -87,6 +92,7 @@ function loginRefresh() {
             checkDirection()
             }, false)
 
+            alert("teste");
             loginPage.style.display = "block";
             
             signinButton.addEventListener("click", (event) => {
