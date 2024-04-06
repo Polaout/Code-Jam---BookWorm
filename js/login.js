@@ -1,3 +1,5 @@
+if (document.getElementById("login") === null) return;
+
 function inputCheck(target) {
 
     const signupError = document.getElementById("signupError");
