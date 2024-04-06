@@ -44,6 +44,8 @@ app.get('/', (req, res) => {
     res.sendFile(__dirname + '/html/app.html');
 });
 
+app.use('/html', express.static(__dirname + '/html'));
+
 app.use('/css', express.static(__dirname + '/css'));
 
 app.use('/fonts', express.static(__dirname + '/fonts'));
