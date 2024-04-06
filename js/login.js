@@ -1,4 +1,4 @@
-if (document.getElementById("login") === null) return;
+if (document.getElementById("login") === null) return alert("teste");
 
 function inputCheck(target) {
 
