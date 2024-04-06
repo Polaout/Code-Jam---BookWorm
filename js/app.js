@@ -7,7 +7,6 @@ function appRefresh() {
 
     case "Home": {
 
-        alert("Home");
         checkLogin();
         break;
 
@@ -64,7 +63,7 @@ function appRefresh() {
         document.addEventListener('touchend', e => {
           touchendY = e.changedTouches[0].screenX
           checkDirection()
-        })
+        }, false)
 
         loginPage.style.display = "block";
         
@@ -73,7 +72,7 @@ function appRefresh() {
           option = "Entrar";
           optionRefresh();
 
-        })
+        }, false)
 
         signupButton.addEventListener("click", (event) => {
 
@@ -91,7 +90,8 @@ function appRefresh() {
 
             loginModal.style.top = "0%";
             loginModal.style.height = "100%";
-            loginModal.style.animation = "up-bottom 0.6s"
+            loginModal.style.width = "100%";
+            loginModal.style.animation = "up-bottom 0.4s"
 
             loginModal.style.borderRadius = "0px";
 

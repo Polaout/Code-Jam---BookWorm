@@ -18,22 +18,6 @@
     
 }
 
-@keyframes up-bottom {
-
-    0% {
-
-      transform: translateY(500px);
-
-    }
-
-    100% {
-
-      transform: translateY(0);
-
-    }
-    
-}
-
 @keyframes fade-in {
 
     0% {
@@ -90,18 +74,27 @@ input[type="password"] {
     
 }
 
-body {
+body  {
 
     margin: 0px;
+
+    height: 80vh;
+    width: 100%;
+
     background-color: #222831;
-    
+
 }
 
 .login {
 
-    display: none; 
+    width: 100%;
+    height: 100%;
+
+    margin: 0px;
+    display: none;
 
 }
+
 
 .loginIllustrate {
 
@@ -135,6 +128,8 @@ body {
 
 .loginModal {
 
+    margin: 0px;
+
     width: 100%;
     height: 50%;
 
@@ -147,6 +142,7 @@ body {
     background-color: #EEEEEE;
 
     animation: fade-in-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+    transition: top 0.3s;
     
 }
 
@@ -288,6 +284,7 @@ body {
 
 .signup {
 
+    margin: 0px;
     display: none;
 
 }
@@ -453,7 +450,7 @@ body {
 
 .signupPasswordRecovery {
 
-    width: 60%;
+    width: 40%;
 
     top: 67%;
     left: 57%;
@@ -695,7 +692,7 @@ body {
 
 .signinPasswordRecovery {
 
-    width: 60%;
+    width: 40%;
 
     top: 67%;
     left: 57%;
