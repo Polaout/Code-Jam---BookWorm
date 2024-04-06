@@ -21,6 +21,8 @@ function appRefresh() {
 
         const signinButton = document.getElementById("signinButton");
         const signupButton = document.getElementById("signupButton");
+        const signinButtonTitle = document.getElementById("signinButtonTitle");
+        const signupButtonTitle = document.getElementById("signupButtonTitle");
 
         const initial = document.getElementById("initial");
         const loginIllustrate = document.getElementById("loginIllustrate");
@@ -28,28 +30,32 @@ function appRefresh() {
 
         var option = "Inscreva-se"
 
-        switch(option) {
+        function optionRefresh() {
+          
+          switch(option) {
 
-          case "Inscreva-se": {
+            case "Inscreva-se": {
 
-            signupButton.style.backgroundColor = "#222831"
-            signinButton.style.backgroundColor = "none";
-            signupButton.style.borderBottomRightRadius = "0px";
-            signupButton.style.borderTopRightRadius = "0px";
-            break;
+              signupButton.style.backgroundColor = "#222831"
+              signupButtonTitle.style.color = "#EEEEEE";
+              signinButtonTitle.style.color = "#222831";
+              signinButton.style.backgroundColor = "";
+              break;
+
+            }
+
+            case "Entrar": {
+
+              signinButton.style.backgroundColor = "#222831"
+              signupButtonTitle.style.color = "#222831";
+              signinButtonTitle.style.color = "#EEEEEE";
+              signupButton.style.backgroundColor = "";
+              break;
+
+            }
 
           }
-
-          case "Entrar": {
-
-            signinButton.style.backgroundColor = "#222831"
-            signupButton.style.backgroundColor = "none";
-            signinButton.style.borderBottomLeftRadius = "0px";
-            signinButton.style.borderTopLeftRadius = "0px";
-            break;
-
-          }
-
+          
         }
 
         document.addEventListener('touchstart', e => {
@@ -66,14 +72,14 @@ function appRefresh() {
         signinButton.addEventListener("click", (event) => {
 
           option = "Entrar";
-          appRefresh();
+          optionRefresh();
 
         })
 
         signupButton.addEventListener("click", (event) => {
 
           option = "Inscreva-se"
-          appRefresh();
+          optionRefresh();
 
         });
 
@@ -96,6 +102,7 @@ function appRefresh() {
         
         }
 
+        optionRefresh();
         break;
 
     }
