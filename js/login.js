@@ -1,5 +1,3 @@
-var option = "Inscreva-se"
-
 function inputCheck(target) {
 
     const signupError = document.getElementById("signupError");
