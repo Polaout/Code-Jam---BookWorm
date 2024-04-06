@@ -448,25 +448,6 @@ body  {
 
 }
 
-.signupPasswordRecovery {
-
-    width: 40%;
-
-    top: 67%;
-    left: 57%;
-
-    position: absolute;
-
-    color: #222831;
-
-    font-family: Inter;
-    font-size: 14px;
-    font-weight: 700;
-
-    text-decoration: underline;
-
-}
-
 .signupButtonInput {
 
     width: 60%;
