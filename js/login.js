@@ -30,7 +30,7 @@ function inputCheck(target) {
 
 }
 
-function loginRefresh() {
+async function loginRefresh() {
 
     alert("refresh");
     switch(page) {
@@ -38,8 +38,9 @@ function loginRefresh() {
         case "Login - Initial": {
 
             alert("initial"); 
-            const loginPage = document.getElementById("login");
-
+            var loginPage = await document.getElementById("login");
+            alert(loginPage);
+    
             let touchstartX = 0;
             let touchendX = 0;
 
@@ -51,12 +52,6 @@ function loginRefresh() {
             const initial = document.getElementById("initial");
             const loginIllustrate = document.getElementById("loginIllustrate");
             const loginModal = document.getElementById("loginModal");
-
-            if (!loginPage) {
-
-                loginRefresh();
-                break;
-            }
 
             function optionRefresh() {
             
@@ -97,6 +92,7 @@ function loginRefresh() {
 
             alert("teste");
             loginPage.style.display = "block";
+            alert("aloha");
 
             signinButton.addEventListener("click", (event) => {
 
