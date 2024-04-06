@@ -83,7 +83,7 @@ function appRefresh() {
 
         function checkDirection() {
 
-          if (touchendY > touchstartY) {
+          if (touchstartY < touchendY) {
 
             initial.style.display = "none";
             loginIllustrate.style.display = "none";
