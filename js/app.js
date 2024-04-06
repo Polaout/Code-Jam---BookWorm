@@ -1,4 +1,5 @@
 var page = "Home";
+let option = "Inscreva-se";
 
 function appRefresh() {
 
@@ -27,8 +28,6 @@ function appRefresh() {
         const initial = document.getElementById("initial");
         const loginIllustrate = document.getElementById("loginIllustrate");
         const loginModal = document.getElementById("loginModal");
-
-        var option = "Inscreva-se"
 
         function optionRefresh() {
           
@@ -101,14 +100,14 @@ function appRefresh() {
               page = "Login - Signup";
               appRefresh();
 
-            }else {
+            }else if (option === "Entrar") {
 
               page = "Login - Signin";
               appRefresh();
             
             }
 
-          }
+          }else if (touchendY < touchstartY) return;
         
         }
 
@@ -122,8 +121,18 @@ function appRefresh() {
         const signup = document.getElementById("signup");
 
         signup.style.display = "block";
+        break;
 
     }
+
+    case "Login - Signin": {
+
+      const signin = document.getElementById("signin");
+
+      signin.style.display = "block";
+      break;
+    
+  }
 }
 
 }
