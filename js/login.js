@@ -91,7 +91,7 @@ function loginRefresh() {
 
             alert("teste");
             loginPage.style.display = "block";
-            
+                
             signinButton.addEventListener("click", (event) => {
 
             option = "Entrar";
