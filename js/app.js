@@ -92,11 +92,21 @@ function appRefresh() {
 
             loginModal.style.top = "0%";
             loginModal.style.height = "100%";
-            loginModal.style.animation = "up-bottom 0.5s"
+            loginModal.style.animation = "up-bottom 0.6s"
 
             loginModal.style.borderRadius = "0px";
-            page = "Login - Signup";
-            appRefresh();
+
+            if (option === "Inscreva-se") {
+
+              page = "Login - Signup";
+              appRefresh();
+
+            }else {
+
+              page = "Login - Signin";
+              appRefresh();
+            
+            }
 
           }
         
