@@ -5,6 +5,10 @@ function inputCheck(target) {
     const signupPasswordBorder = document.getElementById("signupPasswordBorder");
 
 
+    const signinError = document.getElementById("signinError");
+    const signinUsernameBorder = document.getElementById("signinUsernameBorder");
+    const signinPasswordBorder = document.getElementById("signinPasswordBorder");
+
     switch(target) {
 
         case "Signup": {
@@ -42,6 +46,43 @@ function inputCheck(target) {
             break;
 
         }
+
+        case "Signin": {
+
+            var signinUsernameInput = document.getElementById("signinUsernameInput");
+            var signinPasswordInput = document.getElementById("signinPasswordInput");
+
+            if (signinUsernameInput.value) {
+
+                if (signinPasswordInput.value) {
+
+
+
+                }else {
+    
+                    signinError.style.top = "67%";
+                    signinError.innerHTML = "Insira uma senha";
+                    signinError.style.display = "block";
+
+                    signinPasswordBorder.style.borderColor = "red";
+                    break;
+
+                }
+
+            }else {
+
+                signinError.style.top = "54%";
+                signinError.innerHTML = "Insira um nome de usuário";
+                signinError.style.display = "block";
+
+                signinUsernameBorder.style.borderColor = "red";
+                break;
+
+            }
+            break;
+
+        }
+
 
     }
 
@@ -197,7 +238,36 @@ async function loginRefresh() {
 
         const signin = document.getElementById("signin");
 
+        const signinButton = document.getElementById("signinButtonInput");
+        const signinUsernameInput = document.getElementById("signinUsernameInput");
+
         signin.style.display = "block";
+
+        signinButton.addEventListener("click", (event) => {
+
+            inputCheck("Signin");
+
+        });
+
+        signinUsernameInput.addEventListener("click", (event) => {
+
+            var border = document.getElementById("signinUsernameBorder");
+            var signinError = document.getElementById("signinError");
+
+            border.style.borderColor = "#222831";
+            signinError.style.display = "none";
+
+        });
+
+        signinPasswordInput.addEventListener("click", (event) => {
+
+            var border = document.getElementById("signinPasswordBorder");
+            var signinError = document.getElementById("signinError");
+
+            border.style.borderColor = "#222831";
+            signinError.style.display = "none";
+
+        });
         break;
         
     }

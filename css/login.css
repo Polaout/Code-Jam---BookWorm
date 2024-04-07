@@ -779,6 +779,25 @@ body  {
 
 }
 
+.signinError {
+
+    left: 10%;
+
+    position: absolute;
+
+    color: red;
+
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 500;
+
+    opacity: 50%;
+
+    animation: shake-horizontal 0.5s;
+    display: none;
+
+}
+
 .signinButtonInput {
 
     width: 60%;
