@@ -2,6 +2,7 @@ function inputCheck(target) {
 
     const signupError = document.getElementById("signupError");
     const signupUsernameBorder = document.getElementById("signupUsernameBorder");
+    const signupPasswordBorder = document.getElementById("signupPasswordBorder");
 
 
     switch(target) {
@@ -9,9 +10,24 @@ function inputCheck(target) {
         case "Signup": {
 
             var signupUsernameInput = document.getElementById("signupUsernameInput");
+            var signupPasswordInput = document.getElementById("signupPasswordInput");
 
             if (signupUsernameInput.value) {
 
+                if (signupPasswordInput.value) {
+
+
+
+                }else {
+    
+                    signupError.style.top = "67%";
+                    signupError.innerHTML = "Insira uma senha";
+                    signupError.style.display = "block";
+
+                    signupPasswordBorder.style.borderColor = "red";
+                    break;
+
+                }
 
             }else {
 
@@ -20,6 +36,7 @@ function inputCheck(target) {
                 signupError.style.display = "block";
 
                 signupUsernameBorder.style.borderColor = "red";
+                break;
 
             }
             break;
@@ -32,14 +49,11 @@ function inputCheck(target) {
 
 async function loginRefresh() {
 
-    alert("refresh");
     switch(page) {
 
         case "Login - Initial": {
-
-            alert("initial"); 
+ 
             var loginPage = await document.getElementById("login");
-            alert(loginPage);
     
             let touchstartX = 0;
             let touchendX = 0;
@@ -90,9 +104,7 @@ async function loginRefresh() {
             checkDirection()
             }, false)
 
-            alert("teste");
             loginPage.style.display = "block";
-            alert("aloha");
 
             signinButton.addEventListener("click", (event) => {
 
@@ -125,12 +137,12 @@ async function loginRefresh() {
                 if (option === "Inscreva-se") {
 
                 page = "Login - Signup";
-                appRefresh();
+                loginRefresh();
 
                 }else if (option === "Entrar") {
 
                 page = "Login - Signin";
-                appRefresh();
+                loginRefresh();
                 
                 }
 
@@ -154,13 +166,27 @@ async function loginRefresh() {
 
             signupButton.addEventListener("click", (event) => {
 
-            inputCheck("Signup");
+                inputCheck("Signup");
 
             });
 
             signupUsernameInput.addEventListener("click", (event) => {
 
-            var border = document.getElementById("signup")
+                var border = document.getElementById("signupUsernameBorder");
+                var signupError = document.getElementById("signupError");
+
+                border.style.borderColor = "#222831";
+                signupError.style.display = "none";
+
+            });
+
+            signupPasswordInput.addEventListener("click", (event) => {
+
+                var border = document.getElementById("signupPasswordBorder");
+                var signupError = document.getElementById("signupError");
+
+                border.style.borderColor = "#222831";
+                signupError.style.display = "none";
 
             });
             break;

@@ -9,11 +9,8 @@ async function loadHtml(html, elementID) {
 
 }
 
-alert("tafunfando?")
-
 async function appRefresh(typePage) {
 
-  alert("appRefresh");
   switch(typePage) {
 
     case "Home": {
